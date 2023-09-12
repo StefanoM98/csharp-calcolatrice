@@ -61,5 +61,12 @@ namespace csharp_calcolatrice
             }
         }
 
+        //Bonus
+        public static double Esponente(int numeroBase, int potenza)
+        {
+            
+            return Math.Pow(numeroBase, potenza);
+        }
+
     }
 }

@@ -7,7 +7,7 @@
             Console.WriteLine("Benvenuto nella calcolatrice pazza");
 
             int num1 = 3;
-            int num2 = 7;
+            int num2 = 8;
 
             double numd1 = 3.73924;
             double numd2 = 5.39;
@@ -84,6 +84,15 @@
 
             Console.Write("Il risultato è: ");
             Console.Write(CalcoliHelper.Massimo(numd1, numd2));
+
+            Console.WriteLine();
+
+            //BONUS
+
+            Console.WriteLine("Bonus");
+
+            Console.Write("Il risultato è: ");
+            Console.Write(CalcoliHelper.Esponente(num1, num2));
         }
 
     }
