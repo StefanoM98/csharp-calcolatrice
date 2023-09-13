@@ -7,7 +7,7 @@
             Console.WriteLine("Benvenuto nella calcolatrice pazza");
 
             int num1 = 3;
-            int num2 = 8;
+            int num2 = 3;
 
             double numd1 = 3.73924;
             double numd2 = 5.39;
@@ -18,7 +18,9 @@
             //Somma
             Console.Write("Il risultato è: ");
 
-            Console.Write(CalcoliHelper.SommaDueNumeri(num1, num2));
+            int sommaInt = CalcoliHelper.SommaDueNumeri(num1, num2);
+
+            Console.Write(sommaInt);
 
             Console.WriteLine();
 

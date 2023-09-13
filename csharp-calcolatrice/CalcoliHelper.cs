@@ -9,6 +9,13 @@ namespace csharp_calcolatrice
     public static class CalcoliHelper
     {
 
+
+        public static int SommaDueNumeri(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+
+
         public static double SommaDueNumeri(double num1, double num2)
         {
             return num1 + num2;
@@ -62,10 +69,32 @@ namespace csharp_calcolatrice
         }
 
         //Bonus
-        public static double Esponente(int numeroBase, int potenza)
+        public static int Esponente(int numeroBase, int potenza)
         {
-            
-            return Math.Pow(numeroBase, potenza);
+            // SPECIAL CASES:
+            // 0 ^ 1 = 0
+            // 0 ^ 0 = 1
+            // 0 ^ n = 0
+            // n ^ 0 = 1;
+            // n ^ (-n) = 1 / (n^n)
+
+            //return Math.Pow(numeroBase, potenza);
+
+            //numeroBase *= numeroBase;
+
+            int accumulatore = 1;
+
+            for(int i = 0; i < potenza; i++)
+            {
+                accumulatore *= numeroBase;
+            }
+
+            if (potenza < 0)
+            {
+                return 1 / accumulatore; 
+            }
+
+            return accumulatore;
         }
 
     }
